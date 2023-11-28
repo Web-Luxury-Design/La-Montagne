@@ -122,6 +122,16 @@ body {
   background: #ffffff;
   color: black;
 }
+@media screen and (max-width: 750px) {
+  .main nav .navigation li {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 524px) {
+  .main nav .navigation li {
+    font-size: 0.75rem;
+  }
+}
 .main nav .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -149,6 +159,11 @@ body {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
 }
+@media screen and (max-width: 750px) {
+  .main nav .logo {
+    display: none;
+  }
+}
 .main header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -173,13 +188,42 @@ body {
   letter-spacing: 5px;
   text-shadow: 0 0 1px black;
 }
+@media screen and (max-width: 1000px) {
+  .main header h1 {
+    font-size: 3rem;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .main header h1 {
+    font-size: 2.5rem;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 524px) {
+  .main header h1 {
+    font-size: 1.8rem;
+    width: 80%;
+  }
+}
 .main header p {
   color: rgb(252, 252, 252);
   margin: 20px 0 40px;
   text-shadow: 0 0 1px black;
 }
+@media screen and (max-width: 1000px) {
+  .main header p {
+    text-align: center;
+    width: 90%;
+  }
+}
 .main header i {
   font-size: 3rem;
+}
+@media screen and (max-width: 750px) {
+  .main header i {
+    font-size: 2.5rem;
+  }
 }
 
 .section1 {
@@ -219,36 +263,57 @@ body {
   gap: 50px;
   text-align: center;
 }
-.section1 .section-text .date {
-  width: 100%;
-}
 .section1 .section-text .date p {
   position: relative;
   padding: 0 10px;
 }
+@media screen and (max-width: 1000px) {
+  .section1 .section-text .date p {
+    font-size: 0.7rem;
+  }
+}
 .section1 .section-text .date p::before {
   content: "";
   position: absolute;
-  width: 40%;
+  width: 70%;
   height: 1px;
   background: black;
-  left: 0;
+  left: -70%;
   top: 50%;
+}
+@media screen and (max-width: 1000px) {
+  .section1 .section-text .date p::before {
+    background: rgba(0, 0, 0, 0.3647058824);
+    width: 40%;
+    left: -40%;
+  }
 }
 .section1 .section-text .date p::after {
   content: "";
   position: absolute;
-  width: 40%;
+  width: 70%;
   height: 1px;
   background: black;
-  right: 0;
+  right: -70%;
   top: 50%;
+}
+@media screen and (max-width: 1000px) {
+  .section1 .section-text .date p::after {
+    background: rgba(0, 0, 0, 0.3647058824);
+    width: 40%;
+    right: -40%;
+  }
 }
 .section1 .section-text .description {
   width: 70%;
 }
 .section1 .section-text .description h2 {
   font-size: 2.5rem;
+}
+@media screen and (max-width: 1000px) {
+  .section1 .section-text .description h2 {
+    font-size: 2.3rem;
+  }
 }
 .section1 .section-text .description p {
   font-size: 0.75rem;
@@ -297,6 +362,14 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   flex-direction: row;
+}
+@media screen and (max-width: 1000px) {
+  .section2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .section2 .left-part {
   display: -webkit-box;
@@ -360,8 +433,21 @@ footer {
   display: -ms-flexbox;
   display: flex;
 }
+@media screen and (max-width: 1000px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 footer .left-footer {
   width: 50%;
+}
+@media screen and (max-width: 1000px) {
+  footer .left-footer {
+    width: 100%;
+  }
 }
 footer .left-footer .left {
   display: -webkit-box;
@@ -401,6 +487,13 @@ footer .left-footer .left .contact {
       -ms-flex-align: start;
           align-items: start;
   width: 100%;
+}
+@media screen and (max-width: 1000px) {
+  footer .left-footer .left .contact {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 footer .left-footer .left .contact label {
   width: 100%;
@@ -444,6 +537,13 @@ footer .right-footer {
           flex-direction: column;
   width: 50%;
 }
+@media screen and (max-width: 1000px) {
+  footer .right-footer {
+    width: 100%;
+    height: 50vh;
+    min-height: 50vh;
+  }
+}
 footer .right-footer .infos-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -464,6 +564,11 @@ footer .right-footer .infos-container {
   border-left: 1px solid rgba(0, 0, 0, 0.24);
   border-bottom: 1px solid rgba(0, 0, 0, 0.24);
 }
+@media screen and (max-width: 1000px) {
+  footer .right-footer .infos-container {
+    height: 100%;
+  }
+}
 footer .right-footer .infos-container .title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -479,7 +584,12 @@ footer .right-footer .infos-container .title {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 15%;
-  padding: 0 80px 0 20px;
+  padding: 0 70px 0 20px;
+}
+@media screen and (max-width: 1000px) {
+  footer .right-footer .infos-container .title {
+    padding: 0 50px 0 20px;
+  }
 }
 footer .right-footer .infos-container .title h5 {
   font-size: 0.78rem;
@@ -524,7 +634,12 @@ footer .right-footer .infos-container #infos-logo ul {
           flex-direction: column;
   flex-direction: row;
   margin-left: 20px;
-  gap: 20px;
+  gap: 15px;
+}
+@media screen and (max-width: 1110px) {
+  footer .right-footer .infos-container #infos-logo ul {
+    margin-left: 0;
+  }
 }
 footer .right-footer .infos-container #infos-logo ul li {
   background: #ffffff;
@@ -540,4 +655,19 @@ footer .right-footer .infos-container #infos-logo ul li {
 footer .right-footer .infos-container #infos-logo ul li:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+@media screen and (max-width: 550px) {
+  footer .right-footer .infos-container #infos-logo ul li {
+    width: 15px;
+    height: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }/*# sourceMappingURL=index.css.map */

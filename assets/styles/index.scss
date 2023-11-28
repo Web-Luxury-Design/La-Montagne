@@ -77,6 +77,12 @@ body{
                     background: #ffffff;
                     color: $black
                 }
+                @media  screen and (max-width:750px) {
+                    text-align: center;
+                }
+                @media  screen and (max-width:524px) {
+                    font-size: 0.75rem;
+                }
             }
             
         }
@@ -92,6 +98,9 @@ body{
                     transform: scale(1.15);
                 }
             }
+            @media  screen and (max-width:750px) {
+                display: none;
+            }
         }
     }
     header{
@@ -104,14 +113,33 @@ body{
             margin: 0 auto;
             letter-spacing: 5px;
             text-shadow: 0 0 1px $black;
+            @media  screen and (max-width:1000px) {
+                font-size: 3rem;
+                width: 80%;
+            }
+            @media  screen and (max-width:750px) {
+                font-size: 2.5rem;
+                width: 80%;
+            }
+            @media  screen and (max-width:524px) {
+                font-size: 1.8rem;
+                width: 80%;
+            }
         }
         p{
             color: $white;
             margin: 20px 0 40px;
             text-shadow: 0 0 1px $black;
+            @media  screen and (max-width:1000px) {
+                text-align: center;
+                width: 90%;
+            }
         }
         i{
             font-size: 3rem;
+            @media  screen and (max-width:750px) {
+                font-size: 2.5rem;
+            }
         }
     }
 }
@@ -127,27 +155,39 @@ body{
         gap: 50px;
         text-align: center;
         .date{
-            width: 100%;
-            p{
+            p {
                 position: relative;
                 padding: 0 10px;
+                @media  screen and (max-width:1000px) {
+                    font-size: 0.7rem;
+                }
                 &::before{
                     content: "";
                     position: absolute;
-                    width: 40%;
+                    width: 70%;
                     height: 1px;
                     background: $black;
-                    left: 0;
+                    left: -70%;
                     top: 50%;
+                    @media  screen and (max-width:1000px) {
+                        background: #0000005d;
+                        width: 40%;
+                        left: -40%;
+                    }
                 }   
                 &::after{
                     content: "";
                     position: absolute;
-                    width: 40%;
+                    width: 70%;
                     height: 1px;
                     background: $black;
-                    right: 0;
+                    right: -70%;
                     top: 50%;
+                    @media screen and (max-width:1000px){
+                        background:#0000005d;
+                        width: 40%;
+                        right: -40%;
+                    }
                 }   
             }
         }
@@ -155,6 +195,9 @@ body{
             width: 70%;
             h2{
                 font-size: 2.5rem;
+                @media  screen and (max-width:1000px) {
+                   font-size: 2.3rem;
+                }
             }
             p{
                 font-size: 0.75rem;
@@ -180,6 +223,9 @@ body{
     margin: 0 auto;
     @include centerChild();
     flex-direction: row;
+    @media  screen and (max-width:1000px) {
+        flex-direction: column;
+    }
     .left-part{
         @include centerChild();
         padding: 60px 40px 50px;
@@ -218,8 +264,14 @@ footer{
     width: 70%;
     margin: 30px auto 80px;
     display: flex;
+    @media  screen and (max-width:1000px) {
+        flex-direction: column;
+    }
     .left-footer{
         width: 50%;
+        @media  screen and (max-width:1000px) {
+            width: 100%;
+        }
         .left{
             @include centerChild();
             align-items: start;
@@ -229,6 +281,9 @@ footer{
                 @include centerChild();
                 align-items: start;
                 width: 100%;
+                @media  screen and (max-width:1000px) {
+                    align-items: center;
+                }
                 label{
                     width: 100%;
                     text-align: left;
@@ -255,13 +310,17 @@ footer{
                     border: 1px solid;
                     border-radius: 3px;
                 }
-                
             }
         }
     }
     .right-footer{
         @include centerChild();
         width: 50%;
+        @media  screen and (max-width:1000px) {
+            width: 100%;
+            height: 50vh;
+            min-height: 50vh;
+        }
         .infos-container{
             @include centerChild();
             flex-direction: row;
@@ -269,10 +328,16 @@ footer{
             width: 100%;
             border-left: 1px solid rgba(0, 0, 0, 0.24);
             border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+            @media  screen and (max-width:1000px) {
+                height: 100%;
+            }
             .title{
                 @include centerChild();
                 width: 15%;
-                padding: 0 80px 0 20px;
+                padding: 0 70px 0 20px;
+                @media screen and (max-width:1000px){
+                    padding: 0 50px 0 20px;
+                }
                 h5{
                     font-size: 0.78rem;
                     letter-spacing: 1px
@@ -292,7 +357,10 @@ footer{
                     @include centerChild();
                     flex-direction: row;
                     margin-left: 20px;
-                    gap: 20px;
+                    gap: 15px;
+                    @media screen and (max-width:1110px) {
+                      margin-left: 0;      
+                    }
                     li{
                         background: #ffffff;
                         text-align: center;
@@ -303,6 +371,13 @@ footer{
                         transition: 0.25s ease-in-out;
                         &:hover{
                             transform: scale(1.1);
+                        }
+                        @media screen and (max-width:550px) {
+                            width: 15px;
+                            height: 15px;
+                            display: flex;
+                            align-items: center;  
+                            justify-content: center;   
                         }
                     }
                 }
