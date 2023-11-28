@@ -41,7 +41,7 @@
     <section class="section1">
         <div class="section-text">
             <div class="date">
-                <p>April 25,2017</p>
+                <p class="date-text">April 25,2017</p>
             </div>
             <div class="description">
                 <h2>and this is a massive headline</h2>
@@ -81,20 +81,22 @@
 
     <footer>
         <div class="left-footer">
-            <div class="contact">
-                <label for="name">name</label>
-                <input type="text" name="name" id="name">
-            </div>
-            <div class="contact">
-                <label for="email">email</label>
-                <input type="email" name="email" id="email">
-            </div>
-            <div class="contact">
-                <label for="message">message</label>
-                <input type="text" name="message" id="message">
-            </div>
-            <div class="contact">
-                <button type="submit">send message</button>
+            <div class="left">
+                <div class="contact">
+                    <label for="name">name</label>
+                    <input type="text" name="name" id="name" autocomplete="off">
+                </div>
+                <div class="contact">
+                    <label for="email">email</label>
+                    <input type="email" name="email" id="email" autocomplete="off">
+                </div>
+                <div class="contact">
+                    <label for="message">message</label>
+                    <textarea name="message" id="message" autocomplete="off"></textarea>
+                </div>
+                <div class="contact">
+                    <button type="submit">send message</button>
+                </div>
             </div>
         </div>
         <div class="right-footer">
@@ -126,7 +128,7 @@
                 <div class="title">
                     <h5>Social</h5>
                 </div>
-                <div class="info">
+                <div class="info" id="infos-logo">
                     <ul>
                         <li><i class="fa-brands fa-x-twitter" style="color: #2f1d1d;"></i></li>
                         <li><i class="fa-brands fa-facebook-f" style="color: #0d0f12;"></i></li>
